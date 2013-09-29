@@ -11,3 +11,12 @@
       %h1 My web application
       = yield
 
+:javascript
+  $.ajax({
+    type: 'GET',
+    url: '/users',
+    success: fucntion(response){
+      console.log(response);
+    }
+  });
+
