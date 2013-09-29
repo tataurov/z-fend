@@ -10,3 +10,11 @@
     .page.base-width.clearfix
       %h1 My web application
       = yield
+:javascript
+  $.ajax({
+    type: 'GET',
+    url: '/users',
+    success: function(response){
+      console.log(response);
+    }
+  });
