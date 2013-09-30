@@ -1,6 +1,11 @@
 source 'https://rubygems.org'
+
+gem "devise", "~> 3.1.0"
+
 gem 'unicorn'
+
 gem 'haml'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
