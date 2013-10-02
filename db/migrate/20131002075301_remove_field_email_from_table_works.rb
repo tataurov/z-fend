@@ -1,5 +1,5 @@
 class RemoveFieldEmailFromTableWorks < ActiveRecord::Migration
   def change
-    remove_column :table_works, :email, :String
+    remove_column :works, :email, :String
   end
 end
