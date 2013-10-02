@@ -6,10 +6,8 @@ class CreateWorks < ActiveRecord::Migration
       t.string :url
       t.string :site_url
       t.integer :pages_count
-      t.string :type
+      t.string :w_type
       t.datetime :date
-
-      t.timestamps
     end
   end
 end
