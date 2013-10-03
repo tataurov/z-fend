@@ -1,9 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'protected_attributes'
-
-gem 'devise', '3.0.0.rc'
-
 gem 'unicorn'
 
 gem 'haml'
@@ -34,6 +30,12 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
+
+gem 'protected_attributes'
+
+gem 'public_activity', github: 'pokonski/public_activity'
+
+gem 'devise', '3.0.0.rc'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

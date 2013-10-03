@@ -1,7 +1,7 @@
 Testapp::Application.routes.draw do
-  authenticated :user do
-    root :to => 'root#index'
-  end
+
+
+
 
   devise_for :users
   resources :users
