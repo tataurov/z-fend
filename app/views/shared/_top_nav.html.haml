@@ -1,14 +1,13 @@
 %ul.top-nav
   %li
-    %a{:href => "/"} Main
-  %li 
-    %a{:href => "/users"} Users
-  %li 
-    %a{:href => "#"} About  
-  %li 
-    %a{:href => destroy_user_session_path, :method => 'delete'} exit
-
-
-%div
-  = signed_in?    
-  = user_signed_in?    
+    %a{:href => root_path} Main
+  %li
+    - if user_signed_in?
+      = link_to 'Logout', destroy_user_session_path, :method=>'delete'
+    - else
+      = link_to 'Login', new_user_session_path
+  %li
+    - if user_signed_in?
+      = link_to 'Edit account', edit_user_registration_path
+    - else
+      = link_to 'Sign up', new_user_registration_path
