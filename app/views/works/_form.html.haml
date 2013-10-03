@@ -1,20 +1,19 @@
 .form
   = form_for(@work) do |f|
     - if @work.errors.any?
-      #error_explanation
-        %h2
-          = pluralize(@work.errors.count, "error") 
-          prohibited this user from being saved:
-
+      .message.error#error_explanation
+        = pluralize(@work.errors.count, "error") 
+        prohibited this user from being saved:
         %ul
           - @work.errors.full_messages.each do |msg|
             %li= msg 
+
     %ul.fields        
       %li.field
-        = f.label :name
-        = f.text_field :name
+        .label-= f.label :name
+        .field-= f.text_field :name
       %li.field
-        = f.label :url
-        = f.text_field :url
+        .label-= f.label :url
+        .field-= f.text_field :url
       %li.actions
-        = f.submit
+        .field-= f.submit
