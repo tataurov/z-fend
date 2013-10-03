@@ -7,12 +7,12 @@
       %ul
         - @user.errors.full_messages.each do |msg|
           %li= msg
-    %ul.fields        
-      %li.field
-        .label-= f.label :name
-        .field-= f.text_field :name
-      %li.field
-        .label-= f.label :email
-        .field-= f.text_field :email
-      %li.actions
-        .field-= f.submit
+  %ul.fields        
+    %li.field
+      .label-= f.label :name
+      .field-= f.text_field :name
+    %li.field
+      .label-= f.label :email
+      .field-= f.text_field :email
+    %li.actions
+      .field-= f.submit
