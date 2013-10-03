@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
-gem "devise", "~> 3.1.0"
+gem 'protected_attributes'
+
+gem 'devise', '3.0.0.rc'
 
 gem 'unicorn'
 
