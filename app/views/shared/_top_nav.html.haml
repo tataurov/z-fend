@@ -6,8 +6,9 @@
   %li 
     %a{:href => "#"} About  
   %li 
-    %a{:href => destroy_user_session_path} exit
+    %a{:href => destroy_user_session_path, :method => 'delete'} exit
 
 
 %div
   = signed_in?    
+  = user_signed_in?    
