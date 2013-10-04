@@ -7,7 +7,13 @@
   = csrf_meta_tags
 
   %body
-    .page.base-width.clearfix
-      = render 'shared/top_nav'
-      %h1 My web application
-      = yield
+    .page-body
+      .clearfix.top-nav-wrapper.bg-dark
+        .base-width
+          = render 'shared/top_nav'
+      .page.bg-main.clearfix
+        = yield
+    .footer-wrapper.bg-light
+      .footer.base-width.clearfix
+        .copyrights.fr
+          z-fend.ru 2013г.    
