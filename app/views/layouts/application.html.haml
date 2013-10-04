@@ -12,7 +12,10 @@
         .base-width
           = render 'shared/top_nav'
       .page.bg-main.clearfix
-        = yield
+        - if content_for?(:page_header)
+          %h1= yield(:page_header)
+        .base-width
+          = yield
     .footer-wrapper.bg-light
       .footer.base-width.clearfix
         .copyrights.fr
