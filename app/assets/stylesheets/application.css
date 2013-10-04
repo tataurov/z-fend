@@ -1,5 +1,7 @@
 /*
  *= require_self
+ *= require useful/normalize
+ *= require useful/dimensions
  *= require blocks/structure
  *= require blocks/top_nav
  */

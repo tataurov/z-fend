@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'pt_regular';
+    src: url('_fonts/pts55f_w.eot');
+    src: local('O'),
+         url('_fonts/pts55f_w.woff') format('woff'),
+         url('_fonts/pts55f_w.ttf') format('truetype'),
+         url('_fonts/pts55f_w.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'pt_bold';
+    src: url('_fonts/pts75f_w.eot');
+    src: local('O'),
+         url('_fonts/pts75f_w.woff') format('woff'),
+         url('_fonts/ts75f_w.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+body { font-family: 'pt_regular'; }
+b,
+.pt-bold { font-family: 'pt_bold'; }
