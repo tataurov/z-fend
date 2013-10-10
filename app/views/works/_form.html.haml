@@ -15,5 +15,11 @@
       %li.field
         .label-= f.label :url
         .field-= f.text_field :url
+      %li.field
+        .label-= f.label :image
+        .input-= f.file_field :image
+      %li.field
+        .label-= f.label :remote_image_url, "or image URL"
+        .input-= f.text_field :remote_image_url 
       %li.actions
         .field-= f.submit

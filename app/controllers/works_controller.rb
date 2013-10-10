@@ -6,6 +6,10 @@ class WorksController < ApplicationController
   def new
     @work = Work.new
   end
+  
+  def show
+    @work = Work.find(params[:id])	
+  end
 
   # GET /users/1/edit
   def edit

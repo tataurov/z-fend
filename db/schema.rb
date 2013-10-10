@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131002075301) do
+ActiveRecord::Schema.define(version: 20131010104340) do
 
   create_table "users", force: true do |t|
     t.string   "name"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20131002075301) do
     t.integer  "pages_count"
     t.string   "w_type"
     t.datetime "date"
+    t.string   "image"
   end
 
 end
