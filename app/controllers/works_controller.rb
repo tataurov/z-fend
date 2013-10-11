@@ -32,7 +32,7 @@ class WorksController < ApplicationController
   end
 
   def work_params
-    params.require(:work).permit(:name, :url)
+    params.require(:work).permit(:name, :url, :image, :remote_image_url)
   end
 
 end

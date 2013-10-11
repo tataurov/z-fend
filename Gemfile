@@ -37,7 +37,7 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'protected_attributes'
 
-gem 'public_activity', github: 'pokonski/public_activity'
+gem 'public_activity', :github => 'pokonski/public_activity'
 
 gem 'devise', '3.0.0.rc'
 
