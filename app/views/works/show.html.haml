@@ -1,1 +1,8 @@
-= @work.image?
+%h1= @work.name
+
+= @work.id
+= @work.name
+= image_tag @work.image_url if @work.image?
+= @work.url
+= @work.site_url
+= @work.pages_count

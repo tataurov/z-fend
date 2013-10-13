@@ -32,7 +32,7 @@ class WorksController < ApplicationController
   end
 
   def work_params
-    params.require(:work).permit(:name, :url, :image)
+    params.require(:work).permit(:name, :url, :site_url, :pages_count, :w_type, :date, :image)
   end
 
 end
