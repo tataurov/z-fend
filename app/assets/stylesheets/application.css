@@ -2,8 +2,10 @@
  *= require_self
  *= require useful/normalize
  *= require useful/dimensions
+ *= require useful/buttons
  *= require font
  *= require blocks/structure
  *= require blocks/top_nav
+ *= require blocks/forms
  */
 

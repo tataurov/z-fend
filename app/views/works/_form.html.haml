@@ -10,25 +10,25 @@
 
     %ul.fields        
       %li.field
-        .label-= f.label :name
-        .field-= f.text_field :name
+        .label= f.label :name
+        .input= f.text_field :name
       %li.field
-        .label-= f.label :url
-        .field-= f.text_field :url
+        .label= f.label :url
+        .input= f.text_field :url
       %li.field
-        .label-= f.label :site_url
-        .field-= f.text_field :site_url
+        .label= f.label :site_url
+        .input= f.text_field :site_url
       %li.field
-        .label-= f.label :pages_count
-        .field-= f.text_field :pages_count
+        .label= f.label :pages_count
+        .input= f.text_field :pages_count
       %li.field
-        .label-= f.label :w_type
-        .field-= f.text_field :w_type
+        .label= f.label :w_type
+        .input= f.text_field :w_type
       %li.field
-        .label-= f.label :date
-        .field-= f.text_field :date
+        .label= f.label :date
+        .input= f.text_field :date
       %li.field
-        .label-= f.label :image
-        .input-= f.file_field :image
+        .label= f.label :image
+        .input-= f.file_field :image, :class => "button"
       %li.actions
-        .field-= f.submit
+        .input= f.submit :class => "button"
