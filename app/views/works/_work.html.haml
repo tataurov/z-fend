@@ -11,5 +11,5 @@
     - if user_signed_in?
       .fr
         %button.edit Edit
-        %button.delete Delete
+        = link_to('Delete', work_url(work.id), :confirm => "Are you sure?", :method=>:delete)
     .fl.year.mt5 2013г.

@@ -15,6 +15,11 @@ class WorksController < ApplicationController
   def edit
   end
 
+  def destroy
+    Work.find(params[:id]).destroy
+    redirect_to works_url
+  end
+
   # POST /users
   # POST /users.json
   def create
