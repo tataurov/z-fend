@@ -7,5 +7,7 @@
  *= require blocks/structure
  *= require blocks/top_nav
  *= require blocks/forms
+ *= require blocks/forms_inline_links
+ *= require blocks/works_list
  */
 

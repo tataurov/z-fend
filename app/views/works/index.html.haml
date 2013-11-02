@@ -1,6 +1,5 @@
-%ul
+%ul.works-list
   - @works.each do |work|
     %li
-      = work.id
-      = work.name
-      = image_tag work.image_url if work.image?
+      = render("work", :work => work)
+

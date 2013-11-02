@@ -1,0 +1,15 @@
+.wl-item
+  .inn
+    %p
+      стр.
+      = work.pages_count
+    %a{:href => "http://crocoparty.com", :target => "_blank"} Crocoparty.com
+  %a{:ref => "works/croco_party/index.html", :target => "_blank", :class => "img-link"}
+    %img{:src => work.image_url ? work.image_url : '', :alt => ""}
+  html,javascript
+  .clearfix.bottom
+    - if user_signed_in?
+      .fr
+        %button.edit Edit
+        %button.delete Delete
+    .fl.year.mt5 2013г.
