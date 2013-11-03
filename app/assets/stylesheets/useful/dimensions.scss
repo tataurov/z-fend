@@ -123,6 +123,9 @@
 .db { display: block; }
 .dn { display: none; }
 
+.clearfix { display: block; }
+.clearfix:after { display: block; content: ""; clear: both; }
+
 /* images */
 .aci-wrap {
   display: table; table-layout: fixed; overflow: hidden;

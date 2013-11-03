@@ -11,8 +11,17 @@ class WorksController < ApplicationController
     @work = Work.find(params[:id])	
   end
 
-  # GET /users/1/edit
   def edit
+    @work = Work.find(params[:id])
+  end
+
+  def update
+    @work = Work.find(params[:id])
+    if @work.update(work_params)
+      redirect_to works_url
+    else
+      render 'edit'
+    end
   end
 
   def destroy
@@ -20,8 +29,6 @@ class WorksController < ApplicationController
     redirect_to works_url
   end
 
-  # POST /users
-  # POST /users.json
   def create
     @work = Work.new(work_params)
 

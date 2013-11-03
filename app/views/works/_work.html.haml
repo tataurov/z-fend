@@ -1,15 +1,23 @@
 .wl-item
   .inn
-    %p
-      стр.
-      = work.pages_count
-    %a{:href => "http://crocoparty.com", :target => "_blank"} Crocoparty.com
-  %a{:ref => "works/croco_party/index.html", :target => "_blank", :class => "img-link"}
-    %img{:src => work.image_url ? work.image_url : '', :alt => ""}
-  html,javascript
-  .clearfix.bottom
-    - if user_signed_in?
+    - if work.pages_count.present?
       .fr
-        %button.edit Edit
-        = link_to('Delete', work_url(work.id), :confirm => "Are you sure?", :method=>:delete)
-    .fl.year.mt5 2013г.
+        стр.
+        = work.pages_count
+    %a{:href => work.url.present? ? work.url : work_url(work.id), :target => "_blank"}= work.name
+  %a.img-link{:href => work_url(work.id), :target => "_blank"}
+    %img{:src => work.image_url ? work.image_url : '', :alt => ""}
+  - if work.w_type
+    .w-type.mt5
+      = work.w_type
+  .clearfix.bottom
+    .fl.year.mt5
+      - if work.date.present?
+        = work.date.year
+        г.
+  - if user_signed_in?
+    .clearfix.actions.mt5
+      .fr
+        = link_to('Edit', edit_work_path(work.id), :class => "button edit")
+        = link_to('Delete', work_url(work.id), :confirm => "Вы точно хотите удалить?", :method => :delete, :class => "button delete" )
+
