@@ -1,0 +1,14 @@
+%h2
+  Последние работы
+  %a{:href => works_url} смотреть все
+%ul.works-list-sm
+  - @lasts_works.each do |work|
+    %li.wls-item
+      .wls-top
+        %a{:href => work_path(work.id)}= work.name
+      .wls-img
+        %a{:href => work_path(work.id)}
+          %img{:src => work.image_url ? work.image_url : '', :alt => work.name}
+      .wls-bottom
+        = work.pages_count
+        стр.

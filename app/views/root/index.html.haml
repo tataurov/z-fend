@@ -1,2 +1,4 @@
 - content_for(:page_header) do 
   Главная
+- if @lasts_works.present?
+  = render("last_works")
