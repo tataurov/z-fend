@@ -17,6 +17,6 @@
     font-weight: bold;
     font-style: normal;
 }
-body { font-family: 'pt_regular'; }
+body { font-family: 'Neucha', cursive; }
 b,
-.pt-bold { font-family: 'pt_bold'; }
+.pt-bold { font-family: 'Neucha', cursive; }
