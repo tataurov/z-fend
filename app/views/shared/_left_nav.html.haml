@@ -1,0 +1,38 @@
+%ul.left-nav
+  %li
+    %a{:href => root_path}
+      %i.fa.fa-home
+
+      Главная
+  %li
+    - if user_signed_in?
+      = link_to destroy_user_session_path, :method => 'delete' do
+        %i.fa.fa-sign-out
+        Выйти
+
+    - else
+      = link_to new_user_session_path do
+        %i.fa.fa-sign-in
+        Вход
+
+  - if user_signed_in?
+    %li
+      = link_to edit_user_registration_path do
+        %i.fa.fa-pencil
+        Редактировать аккаунт
+
+  - if user_signed_in?
+    %li
+      = link_to new_user_registration_path do
+        %i.fa.fa-users
+        Регистрация
+
+  - if user_signed_in?
+    %li
+      = link_to new_work_path do
+        %i.fa.fa-plus-circle
+        Добавить работу
+  %li
+    = link_to works_path do
+      %i.fa.fa-th
+      Работы

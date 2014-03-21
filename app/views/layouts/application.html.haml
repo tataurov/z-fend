@@ -3,17 +3,17 @@
   %head
     %title Портфолио
 
-    = stylesheet_link_tag "//fonts.googleapis.com/css?family=Neucha&subset=latin,cyrillic", :media => "all", "data-turbolinks-track" => true
+    = stylesheet_link_tag "//fonts.googleapis.com/css?family=PT+Mono&subset=latin,cyrillic", :media => "all", "data-turbolinks-track" => true
     = stylesheet_link_tag "application", :media => "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
   = csrf_meta_tags
 
   %body
     .page-body
-      .clearfix.top-nav-wrapper.bg-dark
-        .base-width
-          = render 'shared/top_nav'
-      .page.bg-main.clearfix
+      .left-nav-wrapper
+        %span.left-nav-control
+        = render 'shared/left_nav'
+      .page.clearfix
         .base-width  
           - if content_for?(:page_header)
             %h1= yield(:page_header)

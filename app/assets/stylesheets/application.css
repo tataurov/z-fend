@@ -5,11 +5,12 @@
  *= require useful/buttons
  *= require font
  *= require blocks/structure
- *= require blocks/top_nav
+ *= require blocks/left_nav
  *= require blocks/forms
  *= require blocks/forms_inline_links
  *= require blocks/works_list
  *= require blocks/sm_works
  *= require blocks/work_show
+ *= require awesome/font-awesome
  */
 
