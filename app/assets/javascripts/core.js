@@ -21,7 +21,7 @@ $doc.ready(function() {
     }
 });
 
-$win.load(function() {
+$doc.load(function() {
     if (!app.modules) {
         return false;
     }
