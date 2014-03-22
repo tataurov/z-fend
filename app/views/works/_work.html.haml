@@ -6,7 +6,7 @@
         = work.pages_count
     %a{:href => work.url.present? ? work.url : work_url(work.id), :target => "_blank"}= work.name
   %a.img-link{:href => work_url(work.id), :target => "_blank"}
-    %img{:src => work.image_url(:big) ? work.image_url(:big) : '', :alt => ""}
+    = lazy_image_tag(work.image_url(:large), :class => "loading")
   - if work.w_type
     .w-type.mt5
       = work.w_type

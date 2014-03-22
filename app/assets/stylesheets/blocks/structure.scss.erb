@@ -1,12 +1,12 @@
 @import "../scss/mixins";
 
-body { background: #fff url(<%= asset_path 'dots.png'%>) -10px -10px; color: #444; font-size: 14px; line-height: 1; height: 100%; }
+body { background: #fff url(<%= asset_path 'dots.png'%>) -9px -9px; color: #444; font-size: 14px; line-height: 1; height: 100%; }
 
 /* main structure */
 .base-width {  }
 .page-body {
   height: 100%; margin-left: 40px;
-  &.active { margin-left: 300px; }
+  &.active { /*margin-left: 300px;*/ }
 }
 .page { padding: 20px 20px 40px; min-height: 100%; @include boxSizing('border-box'); }
 .footer-wrapper { height: 40px; margin-top: -40px; position: relative; @include boxShadow(0 0 5px rgba(0, 0, 0, .3)); }
@@ -17,7 +17,7 @@ a {
 	&:link,
 	&:active,
 	&:visited,
-	&:hover { color: #fff; }
+	&:hover { color: #444; }
 }
 
 h1 { margin-bottom: 15px; font-size: 200%; border-bottom: 2px solid #fff; }
