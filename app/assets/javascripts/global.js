@@ -1,4 +1,5 @@
 
+// Модуль левого меню
 
 app.modules.leftNav = (function(self) {
     var $pageBody = $('#js-page-body');
@@ -14,6 +15,21 @@ app.modules.leftNav = (function(self) {
     }
     self.load = function() {
         addEvents();
+    }
+    return self;
+}(app.modules.leftNav || {}));
+
+app.modules.lazyLoad = (function(self) {
+
+
+    function init() {
+        $("img.lazy").lazyload({
+            threshold : 200
+
+        });
+    }
+    self.load = function() {
+       init();
     }
     return self;
 }(app.modules.leftNav || {}));

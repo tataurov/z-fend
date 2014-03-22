@@ -1,7 +1,8 @@
 - @work_years.each do |date, works|
-  = date.year
-  %ul.works-list
+  .wl-header
+    = date.year
+  %ul.works-list.clearfix
     - works.each do |work|
-      %li
+      %li.wl-list-item
         = render("work", :work => work)
 

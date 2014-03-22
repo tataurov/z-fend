@@ -10,25 +10,25 @@
 
     %ul.fields        
       %li.field
-        .label= f.label :name
+        .label= f.label :name, 'Название'
         .input= f.text_field :name
       %li.field
-        .label= f.label :url
+        .label= f.label :url, 'Локальный URL'
         .input= f.text_field :url
       %li.field
-        .label= f.label :site_url
+        .label= f.label :site_url, 'URL сайта'
         .input= f.text_field :site_url
       %li.field
-        .label= f.label :pages_count
+        .label= f.label :pages_count, 'Количество страниц'
         .input= f.text_field :pages_count
       %li.field
-        .label= f.label :w_type
+        .label= f.label :w_type, 'Тип'
         .input= f.text_field :w_type
       %li.field
-        .label= f.label :date
+        .label= f.label :date, 'Дата'
         .input= f.text_field :date
       %li.field
         .label= f.label :image
         .input-= f.file_field :image, :class => "button"
       %li.actions
-        .input= f.submit :class => "button"
+        .input= f.submit :class => "button", :value => "Сохранить"

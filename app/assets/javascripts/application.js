@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jQuery/lazyLoad.jQuery
 //= require turbolinks
 //= require core
 //= require global
