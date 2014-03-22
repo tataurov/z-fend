@@ -1,11 +1,14 @@
 @import "../scss/mixins";
 
-body { background: #fff url(<%= asset_path 'dots.png'%>); color: #444; font-size: 14px; line-height: 1; height: 100%; }
+body { background: #fff url(<%= asset_path 'dots.png'%>) -10px -10px; color: #444; font-size: 14px; line-height: 1; height: 100%; }
 
 /* main structure */
-.base-width { max-width: 1200px; min-width: 990px; margin: 0 auto; }
-.page-body { min-height: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding-bottom: 40px; }
-.page { padding: 10px; }
+.base-width {  }
+.page-body {
+  height: 100%; margin-left: 40px;
+  &.active { margin-left: 300px; }
+}
+.page { padding: 20px 20px 40px; min-height: 100%; @include boxSizing('border-box'); }
 .footer-wrapper { height: 40px; margin-top: -40px; position: relative; @include boxShadow(0 0 5px rgba(0, 0, 0, .3)); }
 .footer { padding: 10px 0; }
 

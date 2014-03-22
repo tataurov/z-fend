@@ -5,21 +5,26 @@
 
     = stylesheet_link_tag "//fonts.googleapis.com/css?family=PT+Mono&subset=latin,cyrillic", :media => "all", "data-turbolinks-track" => true
     = stylesheet_link_tag "application", :media => "all", "data-turbolinks-track" => true
-    = javascript_include_tag "application", "data-turbolinks-track" => true
+    :javascript
+      var
+        app = app || {config: {}, modules: {coreApplicationBase: {}, application: {}}};
+
+    = javascript_include_tag "application", "data-turbolinks-track" => true, :defer => true
+
   = csrf_meta_tags
 
   %body
-    .page-body
-      .left-nav-wrapper
-        %span.left-nav-control
-        = render 'shared/left_nav'
+    #js-left-nav.left-nav-wrapper
+      %span.left-nav-control
+      = render 'shared/left_nav'
+    #js-page-body.page-body.animated
       .page.clearfix
         .base-width  
           - if content_for?(:page_header)
             %h1= yield(:page_header)
         .base-width
           = yield
-    .footer-wrapper.bg-light
-      .footer.base-width.clearfix
-        .copyrights.fr
-          z-fend.ru 2013г.    
+      .footer-wrapper.bg-light
+        .footer.base-width.clearfix
+          .copyrights.fr
+            z-fend.ru 2013г.
