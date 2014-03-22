@@ -20,15 +20,12 @@ app.modules.leftNav = (function(self) {
 }(app.modules.leftNav || {}));
 
 app.modules.lazyLoad = (function(self) {
-
-
     function init() {
-        $("img.lazy").lazyload({
+        $("img.lazy").show().lazyload({
             threshold : 200
-
         });
     }
-    self.load = function() {
+    self.ready = function() {
        init();
     }
     return self;
