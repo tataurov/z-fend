@@ -5,16 +5,16 @@
       = devise_error_messages!
     %ul.fields
       %li.field
-        .label= f.label :email
+        .label= f.label :email, 'Почта'
         .input= f.email_field :email
       %li.field
-        .label= f.label :name
+        .label= f.label :name, 'Имя'
         .input= f.text_field :name
       %li.field
-        .label= f.label :password
+        .label= f.label :password, 'Пароль'
         .input= f.password_field :password
       %li.field
-        .label= f.label :password_confirmation
+        .label= f.label :password_confirmation, 'Подтверждение пароля'
         .input= f.password_field :password_confirmation
       %li.actions
         .input= f.submit :class => "button"
