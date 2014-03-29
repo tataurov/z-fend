@@ -3,6 +3,7 @@ class WorksController < ApplicationController
   def index
     @works = Work.order("date DESC").all
     @work_years = @works.group_by { |t| t.date.beginning_of_year }
+
   end
 
   def new

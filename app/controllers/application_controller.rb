@@ -1,6 +1,13 @@
 class ApplicationController < ActionController::Base
   before_filter :authenticate_user!, only: [:create, :destroy, :new, :update, :edit]
 
+  layout :layout
+
+  private
+
+  def layout
+    request.xhr? ? false : "application"
+  end
 
   def signed_in_user
     unless signed_in?
