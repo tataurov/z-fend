@@ -7,9 +7,10 @@
     %a{:href => work.url.present? ? work.url : work_url(work.id), :target => "_blank"}= work.name
   %a.img-link{:href => work_url(work.id), :target => "_blank"}
     = lazy_image_tag(work.image_url(:large), :class => "loading")
-  - if work.w_type
-    .w-type.mt5
-      = work.w_type
+  - if work.work_types
+    - work.work_types.each do |type|
+      = type.name
+
   .clearfix.bottom
     .fl.year.mt5
       - if work.date.present?

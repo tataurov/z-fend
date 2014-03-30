@@ -19,6 +19,14 @@
       %li.il-item
         .name Количество страниц:
         .value= @work.pages_count
+      - if @work.work_types.present?
+        %li.il-item
+          .name Тип работы:
+          .value
+            %ul.types-list.lsn
+              - @work.work_types.each do |type|
+                %li.types-item.dib.mr5
+                  = type.name
       %li.il-item
         .name Локальный адрес работы:
         .value

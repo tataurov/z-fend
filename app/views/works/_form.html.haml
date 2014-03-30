@@ -22,13 +22,23 @@
         .label= f.label :pages_count, 'Количество страниц'
         .input= f.text_field :pages_count
       %li.field
-        .label= f.label :w_type, 'Тип'
-        .input= f.text_field :w_type
+        .label Тип
+        .input
+          %ul.lsn
+            - @works_types.each_with_index do |type, i|
+              %li.ilb.mr5
+                %input{:type => "checkbox",
+                  :name => "work_types[]",
+                  :id => "work_work_type_#{type.id}",
+                  :value => type.id,
+                  :checked => @work.work_types.where(name: type.name).present?}
+                %label{:for => "work_work_type_#{type.id}"}
+                  = type.name
       %li.field
         .label= f.label :date, 'Дата'
         .input= f.text_field :date
       %li.field
         .label= f.label :image
-        .input-= f.file_field :image, :class => "button"
+        .input= f.file_field :image
       %li.actions
         .input= f.submit :class => "button", :value => "Сохранить"
