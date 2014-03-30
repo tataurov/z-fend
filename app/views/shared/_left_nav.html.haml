@@ -20,18 +20,25 @@
       = link_to edit_user_registration_path do
         %i.fa.fa-pencil
         Редактировать аккаунт
+    %li
+      = link_to blog_path do
+        %i.fa.fa-comment
+        Блог
 
-  - if user_signed_in?
     %li
       = link_to new_user_registration_path do
         %i.fa.fa-users
         Регистрация
 
-  - if user_signed_in?
     %li
       = link_to new_work_path do
         %i.fa.fa-plus-circle
         Добавить работу
+
+    %li
+      = link_to new_work_type_path do
+        %i.fa.fa-plus-circle
+        Добавить тип работы
   %li
     = link_to works_path do
       %i.fa.fa-th

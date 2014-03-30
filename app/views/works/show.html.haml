@@ -19,7 +19,19 @@
       %li.il-item
         .name Количество страниц:
         .value= @work.pages_count
+      - if @work.work_types.present?
+        %li.il-item
+          .name Тип работы:
+          .value
+            %ul.types-list.lsn
+              - @work.work_types.each do |type|
+                %li.types-item.dib.mr5
+                  = type.name
       %li.il-item
         .name Локальный адрес работы:
         .value
           %a{:href => @work.url}= @work.name
+      - if user_signed_in?
+        %li.il-item.mt20
+          = link_to('Edit', edit_work_path(@work.id), :class => "button edit")
+          = link_to('Delete', work_url(@work.id), :confirm => "Вы точно хотите удалить?", :method => :delete, :class => "button delete" )

@@ -11,15 +11,56 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131011112149) do
+ActiveRecord::Schema.define(version: 20140330055333) do
 
-# Could not dump table "t1" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
+  create_table "posts", force: true do |t|
+    t.string   "author"
+    t.string   "post_title"
+    t.string   "post_body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
-# Could not dump table "users" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
+  create_table "users", force: true do |t|
+    t.string   "name"
+    t.string   "email_old"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+  end
 
-# Could not dump table "works" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
+  create_table "work_types", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "work_types_works", force: true do |t|
+    t.integer "work_type_id"
+    t.integer "work_id"
+  end
+
+  create_table "works", force: true do |t|
+    t.string   "name"
+    t.string   "url"
+    t.string   "site_url"
+    t.integer  "pages_count"
+    t.string   "w_type"
+    t.datetime "date"
+    t.string   "image"
+  end
 
 end

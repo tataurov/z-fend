@@ -1,0 +1,6 @@
+%ul.posts-list.lsn
+  - @posts.each do |post|
+    %li.pl-item.mb20
+      .pli-header= post.post_title
+
+      = link_to 'Посмотреть', "/blog/post/#{post.id}"

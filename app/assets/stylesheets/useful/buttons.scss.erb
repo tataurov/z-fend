@@ -1,3 +1,7 @@
+@import "../scss/mixins";
+
 .button {
-    border: 0; margin: 0; padding: 3px 10px; background: #8da79a; border-radius: 3px; display: inline-block; box-shadow: 1px 1px 3px rgba(0, 0, 0, .3); cursor: pointer; text-decoration: none; background: #e8e8e8;
+  font-size: 20px; color: #fff !important; border: 0; margin: 0; padding: 7px 12px; background: #4569a7; border-radius: 1px; display: inline-block; box-shadow: 1px 1px 1px rgba(0, 0, 0, .3); cursor: pointer; text-decoration: none;
+  @include transition(all .3s linear);
+  &:hover { background: #607ea7; box-shadow: 1px 1px 3px rgba(0, 0, 0, .3); }
 }
