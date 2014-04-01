@@ -30,3 +30,23 @@ app.modules.lazyLoad = (function(self) {
     }
     return self;
 }(app.modules.leftNav || {}));
+
+app.modules.forms = (function(self) {
+    function init() {
+      $doc.on('focus', '.field-with-error input', function() {
+
+        var
+          $this = $(this),
+          $error = $this.closest('.field-with-error').find('.error-');
+
+        $this.closest('.field-with-error').removeClass('field-with-error');
+        $error.slideUp(300, function() {
+          $error.remove();
+        });
+      });
+    }
+    self.ready = function() {
+       init();
+    }
+    return self;
+}(app.modules.forms || {}));

@@ -1,16 +1,21 @@
 .form
   = form_for(@work_type) do |f|
-    - if @work_type.errors.any?
+    -# if @work_type.errors.any?
       .message.error#error_explanation
         = pluralize(@work_type.errors.count, "error")
         %ul
-          - @work_types.errors.full_messages.each do |msg|
+          - @work_type.errors.full_messages.each do |msg|
             %li= msg
 
     %ul.fields
-      %li.field
+      %li.field{:class => @work_type.errors[:name].present? ? 'field-with-error' : ''}
         .label= f.label :name, 'Название'
-        .input= f.text_field :name
+        .input
+          = f.text_field :name
+          - if @work_type.errors[:name].present?
+            - @work_type.errors.messages[:name].each do |error|
+              .error-
+                = error
       %li.field
         .label= f.label :description, 'Описание'
         .input= f.text_field :description
