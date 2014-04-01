@@ -8,17 +8,17 @@
     list-style: none; padding-top: 10px;
     .field { margin-bottom: 6px; }
     .label {
-      width: 200px; display: inline-block; vertical-align: middle;
+      width: 200px; display: inline-block; vertical-align: top; padding-top: .55em;
       label { vertical-align: middle; font-size: 21px; line-height: 0.8; }
     }
     .input {
       display: inline-block; vertical-align: middle;
-
+      textarea { height: 200px; }
       textarea,
       input[type="email"],
       input[type="password"],
       input[type="text"] {
-        border: 1px solid #666; border-radius: 2px; padding: 3px 10px; font-size: 24px; @include transition(all .3s linear);
+        width: 300px; @include boxSizing(border-box);  border: 1px solid #666; border-radius: 2px; padding: 3px 10px; font-size: 24px; @include transition(all .3s linear);
         &:focus { border: 1px solid $formAcceptColor; box-shadow: 0 0 2px $formAcceptColor, 0 0 4px $formAcceptColor; }
       }
     }

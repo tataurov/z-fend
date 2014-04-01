@@ -1,0 +1,9 @@
+%ul.work-types-list.lsn
+  - @work_types.each do |work_type|
+    %li.wt-item
+      .wt-title= work_type.name
+      .wt-description= work_type.description.present? ? work_type.description : "нет описания"
+      - if user_signed_in?
+        .wt-actions
+          = link_to('Edit', edit_work_type_path(work_type.id), :class => "button edit small")
+          = link_to('Delete', work_type_url(work_type.id), :confirm => "Вы точно хотите удалить?", :method => :delete, :class => "button delete small" )

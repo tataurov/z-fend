@@ -1,9 +1,9 @@
 @import "../scss/mixins";
 
-body { background: #fff url(<%= asset_path 'dots.png'%>) -9px -9px; color: #444; font-size: 14px; line-height: 1; height: 100%; }
+body { background: #f6f6f6; color: #444; font-size: 14px; line-height: 1; height: 100%; }
 
 /* main structure */
-.base-width {  }
+.base-width { min-width: 720px; }
 .page-body {
   height: 100%; margin-left: 40px;
   &.active { /*margin-left: 300px;*/ }
@@ -38,5 +38,10 @@ h2 { margin-bottom: 15px; font-size: 150%; }
 }
 
 /* animated objects */
-
 .animated { @include transition(all .3s linear); }
+
+/* two cols grid */
+.container-2 {
+  .grid-1 { float: left; width: 50%; @include boxSizing(border-box); padding-right: 10px; }
+  .grid-2 { float: left; width: 50%; @include boxSizing(border-box); padding-left: 10px; }
+}

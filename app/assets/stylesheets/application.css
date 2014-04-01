@@ -11,6 +11,7 @@
  *= require blocks/works_list
  *= require blocks/sm_works
  *= require blocks/work_show
+ *= require blocks/work_types_list
  *= require awesome/font-awesome
  */
 
