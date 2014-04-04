@@ -1,0 +1,12 @@
+.work-types-list {
+  font-size: 120%;
+  .wt-item {
+    overflow: hidden; padding: 4px; border-top: 1px solid #ccc; letter-spacing: -1px;
+    &:first-child { border-top: 0; }
+    &:nth-child(even) { background: rgba(0, 0, 0, .2); }
+    .wt-title { display: inline-block; vertical-align: middle; width: 15%; }
+    .wt-description { display: inline-block; vertical-align: middle; width: 49%; }
+    .wt-actions { float: right; width: 28%; text-align: right; }
+    .button { margin-bottom: 3px; }
+  }
+}
