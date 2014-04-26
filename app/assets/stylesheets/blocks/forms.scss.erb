@@ -8,11 +8,11 @@
     list-style: none; padding-top: 10px;
     .field { margin-bottom: 6px; }
     .label {
-      width: 200px; display: inline-block; vertical-align: top; padding-top: .55em;
+      width: 200px; float: left; padding-top: .55em;
       label { vertical-align: middle; font-size: 21px; line-height: 0.8; }
     }
     .input {
-      display: inline-block; vertical-align: middle;
+      display: block; vertical-align: middle; margin-left: 200px;
       textarea { height: 200px; }
       textarea,
       input[type="email"],
@@ -21,6 +21,7 @@
         width: 300px; @include boxSizing(border-box);  border: 1px solid #666; border-radius: 2px; padding: 3px 10px; font-size: 24px; @include transition(all .3s linear);
         &:focus { border: 1px solid $formAcceptColor; box-shadow: 0 0 2px $formAcceptColor, 0 0 4px $formAcceptColor; }
       }
+      select { height: 39px; width: 60px; vertical-align: top; font-size: 21px; margin-top: 6px; }
     }
     .field-with-error {
       textarea,
@@ -30,7 +31,7 @@
         & { border: 1px solid $formErrorColor; box-shadow: 0 0 2px $formErrorColor, 0 0 4px $formErrorColor; }
       }
     }
-    .actions { margin-left: 213px; margin-top: 15px; }
+    .actions { margin-top: 15px; }
     .error- { font-size: 90%; line-height: 1.1; vertical-align: middle; color: $formErrorColor; }
   }
 }

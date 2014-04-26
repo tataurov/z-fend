@@ -44,7 +44,13 @@ app.modules.forms = (function(self) {
           $error.remove();
         });
       });
+
+      $('.js-date-picker').datepicker({
+        dateFormat: 'dd-mm-yy'
+      });
+
     }
+
     self.ready = function() {
        init();
     }

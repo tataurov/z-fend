@@ -20,4 +20,8 @@
         .label= f.label :description, 'Описание'
         .input= text_area(:work_type, :description)
       %li.actions
-        .input= f.submit :class => "button", :value => "Сохранить"
+        .input
+          = link_to request.referer, :class => "back-link" do
+            %i.fa.fa-hand-o-left
+            Назад
+          = f.submit :class => "button", :value => "Сохранить"

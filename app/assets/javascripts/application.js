@@ -13,6 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require jQuery/lazyLoad.jQuery
+//= require jQuery/ui-datepicker_ru
+//= require jQuery/jquery-ui-1.10.4.custom
 //= require core
 //= require global
-//= require_tree .
+

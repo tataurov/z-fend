@@ -3,4 +3,6 @@
     %li.pl-item.mb20
       .pli-header= post.post_title
 
-      = link_to 'Посмотреть', "/blog/post/#{post.id}"
+      = link_to 'Посмотреть', blog_post_url(post.id)
+      - if user_signed_in?
+        = link_to('Delete', blog_post_url(post.id), :confirm => "Вы точно хотите удалить?", :method => :delete, :class => "button delete" )

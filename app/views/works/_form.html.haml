@@ -20,7 +20,11 @@
         .input= f.text_field :site_url
       %li.field
         .label= f.label :pages_count, 'Количество страниц'
-        .input= f.text_field :pages_count
+        .input
+          %select{:name => 'work[pages_count]', :id => 'work_pages_count'}
+            - for i in 0..15
+              %option{:value => i}= i
+
       %li.field
         .label Тип
         .input
@@ -36,9 +40,13 @@
                   = type.name
       %li.field
         .label= f.label :date, 'Дата'
-        .input= f.text_field :date
+        .input= f.text_field :date, :class => 'js-date-picker'
       %li.field
         .label= f.label :image
         .input= f.file_field :image
       %li.actions
-        .input= f.submit :class => "button", :value => "Сохранить"
+        .input
+          = link_to request.referer, :class => "back-link" do
+            %i.fa.fa-hand-o-left
+            Назад
+          = f.submit :class => "button", :value => "Сохранить"

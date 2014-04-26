@@ -5,27 +5,24 @@
 
       Главная
   %li
-    - if user_signed_in?
-      = link_to destroy_user_session_path, :method => 'delete' do
-        %i.fa.fa-sign-out
-        Выйти
-
-    - else
-      = link_to new_user_session_path do
-        %i.fa.fa-sign-in
-        Вход
-
+    = link_to works_path do
+      %i.fa.fa-th
+      Работы
   - if user_signed_in?
     %li
       = link_to edit_user_registration_path do
         %i.fa.fa-pencil
-        Редактировать аккаунт
+        Аккаунт
     %li
       = link_to blog_path do
         %i.fa.fa-comment
         Блог
-
     %li
+      = link_to blog_post_new_path do
+        %i.fa.fa-plus-circle
+        Добавить пост
+
+    -#%li
       = link_to new_user_registration_path do
         %i.fa.fa-users
         Регистрация
@@ -40,6 +37,13 @@
         %i.fa.fa-plus-circle
         Добавить тип работы
   %li
-    = link_to works_path do
-      %i.fa.fa-th
-      Работы
+    - if user_signed_in?
+      = link_to destroy_user_session_path, :method => 'delete' do
+        %i.fa.fa-sign-out
+        Выйти
+
+    - else
+      = link_to new_user_session_path do
+        %i.fa.fa-sign-in
+        Вход
+

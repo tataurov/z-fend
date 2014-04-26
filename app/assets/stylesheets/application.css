@@ -4,6 +4,7 @@
  *= require useful/dimensions
  *= require useful/buttons
  *= require font
+ *= require ui-darkness/jquery-ui-1.10.4.custom
  *= require blocks/structure
  *= require blocks/left_nav
  *= require blocks/forms
