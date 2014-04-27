@@ -5,8 +5,9 @@ class BlogController < ApplicationController
     @posts = Post.order('id').reverse
   end
 
-  def post
+  def show
     @post = Post.find(params[:id])
+    render 'post'
   end
 
   def destroy
@@ -28,8 +29,23 @@ class BlogController < ApplicationController
     end
   end
 
-  def post_new
+  def new
     @post = Post.new
+    render 'post_new'
+  end
+
+  def edit
+    @post = Post.find(params[:id])
+    render 'post_edit'
+  end
+
+  def update
+    @post = Post.find(params[:id])
+    if @post.update(post_params)
+      redirect_to blog_url
+    else
+      render 'edit'
+    end
   end
 
   def post_params

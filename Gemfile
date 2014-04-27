@@ -30,6 +30,7 @@ gem 'jquery-rails'
 gem "rmagick", "~> 2.12.0"
 
 gem "carrierwave", "~> 0.9.0"
+gem 'mini_magick'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'

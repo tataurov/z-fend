@@ -5,4 +5,5 @@
 
       = link_to 'Посмотреть', blog_post_url(post.id)
       - if user_signed_in?
-        = link_to('Delete', blog_post_url(post.id), :confirm => "Вы точно хотите удалить?", :method => :delete, :class => "button delete" )
+        = link_to('Edit', edit_post_url(post.id), :class => "button edit")
+        = link_to('Delete', post_url(post.id), :confirm => "Вы точно хотите удалить?", :method => :delete, :class => "button delete" )
