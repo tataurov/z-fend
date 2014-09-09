@@ -21,3 +21,4 @@
 /log/*.log
 /tmp
 /public/in_work
+/bin
