@@ -15,6 +15,7 @@
 //= require jQuery/lazyLoad.jQuery
 //= require jQuery/ui-datepicker_ru
 //= require jQuery/jquery-ui-1.10.4.custom
+//= require ckeditor/override
 //= require ckeditor/init
 //= require core
 //= require global
